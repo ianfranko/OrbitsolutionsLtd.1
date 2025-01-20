@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JMEFMBD7FJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JMEFMBD7FJ');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Orbit Solutions Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .gallery-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.gallery-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.gallery-header p {
+  color: #777;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.gallery-categories {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gallery-categories button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.gallery-categories button:hover {
+  background-color: #0056b3;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.load-more {
+  margin-top: 20px;
+}
+
+.load-more button {
+  padding: 10px 30px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.load-more button:hover {
+  background-color: #0056b3;
+}
+
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .thumbnail-wrapper {
+            position: relative;
+            aspect-ratio: 4/3;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .thumbnail.loaded {
+            opacity: 1;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.08);
+        }
+
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #0021c1;
+            border-radius: 50%;
+            animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            opacity: 1;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            display: block;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .close:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 33, 193, 0.7);
+            color: white;
+            padding: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-button:hover {
+            background: rgba(0, 33, 193, 0.9);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/index.html">Orbit Solutions Ltd</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog.html">News</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Gallery Section -->
+<section class="gallery-section">
+    <div class="gallery-header">
+        <h2>Our Gallery</h2>
+        <p>Explore our projects and solutions</p>
+    </div>
+    <div class="gallery-categories">
+        <button>Security Systems</button>
+        <button>Office and Staff</button>
+        <button>Surveillance</button>
+        <button>Networking</button>
+        <button>Events</button>
+    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="assets/Gallery images/1.png" alt="Security Systems"></div>
+        <div class="gallery-item"><img src="assets/Gallery images/2.png" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Gallery1/15.png" alt="Surveillance"></div>
+        <div class="gallery-item"><img src="assets/Gallery images/4.png" alt="Networking"></div>
+        <div class="gallery-item"><img src="assets/Gallery1/13.png" alt="Security Systems"></div>
+        <div class="gallery-item"><img src="assets/Gallery1/16.png" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/31.jpg" alt="Surveillance"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/30.jpg" alt="Networking"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/33.jpg" alt="Security Systems"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/21.jpg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Gallery1/14.png" alt="Surveillance"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/22.jpg" alt="Networking"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/23.jpg" alt="Security Systems"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/25.jpg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Products/Intruder alarm systems.png" alt="Surveillance"></div>
+        <div class="gallery-item"><img src="assets/Products/Fire alarmsystem.png" alt="Networking"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/27.jpg" alt="Security Systems"></div>
+        <div class="gallery-item"><img src="assets/CAMERA/CAMERA PRODUCTS/12.jpg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/CAMERA/BNC CONNECTORS.jpeg" alt="Surveillance"></div>
+        <div class="gallery-item"><img src="assets/FIRE/8 ZONE FIRE PANNEL.webp" alt="Networking"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/28.jpg" alt="Security Systems"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/29.jpg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/32.jpg" alt="Surveillance"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/34.jpg" alt="Networking"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/17.jpg" alt="Security Systems"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/18.jpg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/19.jpg" alt="Surveillance"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/20.jpg" alt="Networking"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/24.jpg" alt="Security Systems"></div>
+        <div class="gallery-item"><img src="assets/Gallery2/22.jpg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Orbit Photo 35.JPG" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Orbit Photos - Aimable Studio/Orbit Photo 6.JPG" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Orbit Photos - Aimable Studio/Orbit Photo 7.JPG" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Products/Biometric Acces Control.webp" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/CAMERA/CAMERA PRODUCTS/15.jpg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Gallery images/OS - Procurement Team 3.jpg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Gallery images/OS - Stock Products 3.jpg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Gallery1/17.jpeg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Gallery1/18.jpeg" alt="Fire Safety"></div>
+        <div class="gallery-item"><img src="assets/Gallery1/19.jpeg" alt="Fire Safety"></div>
+    </div>
+</section>
+
+<!-- Video Section -->
+<section id="videos" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Videos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0Fig7w_ot30" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ayzKxYBYA0g" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-light py-4" style="background-color: #0021c1 !important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>COMPANY</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/about.html" class="text-light">About Us</a></li>
+                    <li><a href="/about.html" class="text-light">Leadership</a></li>
+                    <li><a href="/gallery.html" class="text-light">Community and Social Responsibility</a></li>
+                    <li><a href="/about.html" class="text-light">Company Structure</a></li>
+                </ul>
+            </div>   
+            <div class="col-md-3">
+                <h5>NEWS</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/blog.html" class="text-light">News</a></li>
+                    <li><a href="/blog.html" class="text-light">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>CAREERS</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/blog.html" class="text-light">Careers</a></li>
+                    <li><a href="/blog.html" class="text-light">Job Search</a></li>
+                </ul>
+                <h6 class="mt-4">CONTACT US</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/about.html" class="text-light">Support</a></li>
+                    <li><a href="/products.html" class="text-light">Business Inquiries</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>FOLLOW US</h5>
+                <div class="social-icons">
+                    <a href="#" class="text-light me-2"><i class="fab fa-linkedin"></i>Linkedin</a>
+                    <a href="https://web.facebook.com/people/Orbit-Solutions-Ltd/61571127401157/" class="text-light me-2"><i class="fab fa-facebook"></i>Facebook</a>
+                    <a href="https://x.com/OrbitSolsLtd" class="text-light me-2"><i class="fab fa-twitter"></i>Twitter</a>
+                    <a href="https://www.youtube.com/@OrbitSolutions-ltd?sttick=0" class="text-light me-2"><i class="fab fa-youtube"></i>Youtube</a>
+                    <a href="https://www.instagram.com/orbitsolutionsltd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-light"><i class="fab fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+        </div>
+        <h3>Find Us Here</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7975.04058549848!2d30.111537999999996!3d-1.9447310000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca71e39fff2ef%3A0xd8feba0bb61d4711!2sKG%2016%20Ave%2C%20Kigali%2C%20Rwanda!5e0!3m2!1sen!2ske!4v1734590838379!5m2!1sen!2ske" width="1100" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="mb-0">&copy; 2025 Orbit Solutions Ltd | All Rights Reserved</p>
+        <ul class="list-inline mt-2">
+            <li class="list-inline-item"><a href="#" class="text-light">Terms & Conditions</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light">Privacy Statement</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light">Your Privacy Choices</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light">Cookie Notice</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+    const images = [
+        { src: 'assets/Gallery images/1.png', alt: 'Gallery Image 1', thumbnail: 'assets/Gallery images/1.png' },
+        { src: 'assets/Gallery images/2.png', alt: 'Gallery Image 2', thumbnail: 'assets/Gallery images/2.png' },
+        { src: 'assets/Gallery1/15.png', alt: 'Gallery Image 3', thumbnail: 'assets/Gallery1/15.png' },
+        { src: 'assets/Gallery images/4.png', alt: 'Gallery Image 4', thumbnail: 'assets/Gallery images/4.png' },
+        { src: 'assets/Gallery1/13.png', alt: 'Gallery Image 5', thumbnail: 'assets/Gallery1/13.png' },
+        { src: 'assets/Gallery1/16.png', alt: 'Gallery Image 6', thumbnail: 'assets/Gallery1/16.png' },
+        { src: 'assets/Gallery2/31.jpg', alt: 'Gallery Image 7', thumbnail: 'assets/Gallery2/31.jpg' },
+        { src: 'assets/Gallery2/30.jpg', alt: 'Gallery Image 8', thumbnail: 'assets/Gallery2/30.jpg' },
+        { src: 'assets/Gallery2/33.jpg', alt: 'Gallery Image 9', thumbnail: 'assets/Gallery2/33.jpg' },
+        { src: 'assets/Gallery2/21.jpg', alt: 'Gallery Image 10', thumbnail: 'assets/Gallery2/21.jpg' },
+        { src: 'assets/Gallery1/14.png', alt: 'Gallery Image 11', thumbnail: 'assets/Gallery1/14.png' },
+        { src: 'assets/Gallery2/22.jpg', alt: 'Gallery Image 12', thumbnail: 'assets/Gallery2/22.jpg' },
+        { src: 'assets/Gallery2/23.jpg', alt: 'Gallery Image 13', thumbnail: 'assets/Gallery2/23.jpg' },
+        { src: 'assets/Gallery2/25.jpg', alt: 'Gallery Image 14', thumbnail: 'assets/Gallery2/25.jpg' },
+        { src: 'assets/Products/Intruder alarm systems.png', alt: 'Gallery Image 15', thumbnail: 'assets/Products/Intruder alarm systems.png' },
+        { src: 'assets/Products/Fire alarmsystem.png', alt: 'Gallery Image 16', thumbnail: 'assets/Products/Fire alarmsystem.png' },
+        { src: 'assets/Gallery2/27.jpg', alt: 'Gallery Image 17', thumbnail: 'assets/Gallery2/27.jpg' },
+        { src: 'assets/CAMERA/CAMERA PRODUCTS/12.jpg', alt: 'Gallery Image 18', thumbnail: 'assets/CAMERA/CAMERA PRODUCTS/12.jpg' },
+        { src: 'assets/CAMERA/BNC CONNECTORS.jpeg', alt: 'Gallery Image 19', thumbnail: 'assets/CAMERA/BNC CONNECTORS.jpeg' },
+        { src: 'assets/FIRE/8 ZONE FIRE PANNEL.webp', alt: 'Gallery Image 20', thumbnail: 'assets/FIRE/8 ZONE FIRE PANNEL.webp' }
+    ];
+
+    let currentImageIndex = 0;
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '100px',
+        threshold: 0.1
+    };
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadImage(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    function loadImage(imageElement) {
+        const src = imageElement.dataset.src;
+        const tempImage = new Image();
+        tempImage.onload = () => {
+            imageElement.src = src;
+            imageElement.classList.add('loaded');
+            const spinner = imageElement.previousElementSibling;
+            if (spinner) {
+                spinner.style.opacity = '0';
+                setTimeout(() => spinner.remove(), 300);
+            }
+        };
+        tempImage.onerror = () => {
+            const wrapper = imageElement.parentElement;
+            wrapper.innerHTML = '<div class="error">Image failed to load</div>';
+        };
+        tempImage.src = src;
+    }
+
+    function initGallery() {
+        const gallery = document.getElementById('gallery');
+        images.forEach((image, index) => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'thumbnail-wrapper';
+
+            const spinner = document.createElement('div');
+            spinner.className = 'loading-spinner';
+            wrapper.appendChild(spinner);
+
+            const img = document.createElement('img');
+            img.dataset.src = image.thumbnail;
+            img.alt = image.alt;
+            img.className = 'thumbnail';
+            img.onclick = () => openModal(index);
+
+            wrapper.appendChild(img);
+            gallery.appendChild(wrapper);
+
+            imageObserver.observe(img);
+        });
+    }
+
+    function openModal(index) {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('imageModalContent');
+        currentImageIndex = index;
+        modal.style.display = 'block';
+        setTimeout(() => modal.classList.add('show'), 10);
+        modalImg.src = images[currentImageIndex].src;
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.classList.remove('show');
+        setTimeout(() => modal.style.display = 'none', 300);
+    }
+
+    function navigate(direction) {
+        const modalImg = document.getElementById('modalImage');
+        modalImg.style.opacity = '0';
+        setTimeout(() => {
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            modalImg.src = images[currentImageIndex].src;
+            modalImg.style.opacity = '1';
+        }, 200);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (document.getElementById('imageModal').style.display === 'block') {
+            switch(e.key) {
+                case 'ArrowLeft':
+                    navigate(-1);
+                    break;
+                case 'ArrowRight':
+                    navigate(1);
+                    break;
+                case 'Escape':
+                    closeModal();
+                    break;
+            }
+        }
+    });
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('imageModal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initGallery();
+        document.querySelector('.close').addEventListener('click', closeModal);
+        document.getElementById('nextButton').addEventListener('click', () => navigate(1));
+        document.getElementById('nextButton').addEventListener('click', () => navigate(1));
+    });
+    initGallery();
+    document.querySelector('.close').addEventListener('click', closeModal);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

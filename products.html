@@ -1,0 +1,2607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Orbit Solutions Ltd</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom Styles */
+        .hero-section {
+            background:  url('assets/Products page background .jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .category-filter {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            margin: 5px;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .card {
+            transition: all 0.3s;
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .product-search {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #007bff;
+            margin: 20px auto;
+        }
+
+        .product-price {
+            font-size: 1.25rem;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .stock-status {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .in-stock {
+            color: #28a745;
+        }
+
+        .out-stock {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/indext.html">
+                <img src="Orbit solutions Logo (1).png" alt="Orbit Solutions Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p class="lead">Discover our comprehensive range of security and safety solutions</p>
+        </div>
+    </section>
+
+    <!-- Main Products Section -->
+    <section class="products-section py-5">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="product-search">
+                <input type="text" class="form-control form-control-lg" id="productSearch" 
+                       placeholder="Search products...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="category-filter text-center">
+                <h4 class="mb-3">Filter by Category</h4>
+                <button class="btn btn-primary filter-btn active" data-category="all">All</button>
+                <button class="btn btn-outline-primary filter-btn" data-category="accessControlProducts">Access Automation</button>
+                <button class="btn btn-outline-primary filter-btn" data-category="access">Access Conrol</button>
+                <button class="btn btn-outline-primary filter-btn" data-category="baggage/ laugage scanners">Baggage/ Laguage Scanners</button>
+                <button class="btn btn-outline-primary filter-btn" data-category="cable">Cables</button>
+                <button class="btn btn-outline-primary filter-btn" data-category="IT Networking">IT Networking</button>
+                <button class="btn btn-outline-primary filter-btn" data-category="camera">Cameras</button>
+                <button class="btn btn-outline-primary filter-btn" data-category="Air conditioning">Air conditioning</button>
+                <button class="btn btn-outline-primary filter-btn" data-category="fire detection">Fire detection</button>
+                <button class="btn btn-outline-primary filter-btn" data-category="fire Suppression">Fire Suppression</button>
+                <button class="btn btn-outline-primary filter-btn" data-category="fire Fighting">Fire Fighting</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row" id="productsGrid">
+                <!-- Access Control Products -->
+<div class="row" id="productsGrid">
+    <!-- Access Control Products -->
+<div class="row" id="accessControlProducts">
+    <!-- 1. CRF18 FINGERPRINT T&A -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/CRF18.png" class="card-img-top" alt="CRF18 FINGERPRINT">
+            <div class="card-body">
+                <h5 class="card-title">CRF18 FINGERPRINT T&A</h5>
+                <p class="card-text">Advanced fingerprint time and attendance system</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. F19 FINGERPRINT TERMINAL -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/f19-front.jpg" class="card-img-top" alt="F19 FINGERPRINT">
+            <div class="card-body">
+                <h5 class="card-title">F19 FINGERPRINT TERMINAL</h5>
+                <p class="card-text">High-performance fingerprint access control terminal</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. F21 Finger Print Terminal -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/F21.png" class="card-img-top" alt="F21 FINGERPRINT">
+            <div class="card-body">
+                <h5 class="card-title">F21 Finger Print Terminal</h5>
+                <p class="card-text">Modern fingerprint access control solution</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. F22 FINGERPRINT TERMINAL -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/f22.png" class="card-img-top" alt="F22 FINGERPRINT">
+            <div class="card-body">
+                <h5 class="card-title">F22 FINGERPRINT TERMINAL</h5>
+                <p class="card-text">Advanced biometric access control device</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. IC S50 ENTRANCE GUARD CARD -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/Acces Products/5.jpg" class="card-img-top" alt="IC S50 CARD">
+            <div class="card-body">
+                <h5 class="card-title">IC S50 ENTRANCE GUARD CARD</h5>
+                <p class="card-text">Professional access control card (X00101068)</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. FR1200 FINGERPRINT READER -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/FR1200.webp" class="card-img-top" alt="FR1200 READER">
+            <div class="card-body">
+                <h5 class="card-title">FR1200 FINGERPRINT READER</h5>
+                <p class="card-text">High-speed fingerprint scanning device</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. X628/C FINGER PRINT TIME & ATTENDANCE -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/X628-C-Fingerprint-Time-Attendance-Terminal.png" class="card-img-top" alt="X628/C">
+            <div class="card-body">
+                <h5 class="card-title">X628/C FINGER PRINT TIME & ATTENDANCE</h5>
+                <p class="card-text">Complete time and attendance solution</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. DS-KIS203 VIDEO INTERCOM KIT -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/DS-KIS203.webp" class="card-img-top" alt="DS-KIS203">
+            <div class="card-body">
+                <h5 class="card-title">DS-KIS203 VIDEO INTERCOM KIT</h5>
+                <p class="card-text">Complete video intercom solution</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. ABK 805 DOOR RELEASE BUTTON -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/ABK-805_DOOR REALISE BUTTON .jpg" class="card-img-top" alt="ABK 805">
+            <div class="card-body">
+                <h5 class="card-title">ABK 805 DOOR RELEASE BUTTON W/BASE</h5>
+                <p class="card-text">Professional door release button with base</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. ABK802 DOOR EXIT BUTTON -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/Acces Products/11.jpg" class="card-img-top" alt="ABK802">
+            <div class="card-body">
+                <h5 class="card-title">ABK802 DOOR EXIT BUTTON PLASTIC</h5>
+                <p class="card-text">Durable plastic door exit button</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- 11. YM 280 LED MAGNETIC LOCK -->
+        <div class="col-md-4 col-lg-3 product-item" data-category="access">
+            <div class="card">
+                <span class="badge bg-primary category-badge">ACCESS</span>
+                <img src="assets/ACCES PRODUCTS/YM 280 LED MAGNETIC LOCK.avif" class="card-img-top" alt="YM 280 LED">
+                <div class="card-body">
+                    <h5 class="card-title">YM 280 LED MAGNETIC LOCK</h5>
+                    <p class="card-text">LED indicator magnetic lock for secure access control</p>
+                    <div class="stock-status">
+                        <i class="fas fa-check-circle in-stock"></i> In Stock
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 12. YM350-LED MAGNETIC LOCK -->
+        <div class="col-md-4 col-lg-3 product-item" data-category="access">
+            <div class="card">
+                <span class="badge bg-primary category-badge">ACCESS</span>
+                <img src="assets/ACCES PRODUCTS/YM 350- LED MAGNETIC LOCK.webp" class="card-img-top" alt="YM350-LED">
+                <div class="card-body">
+                    <h5 class="card-title">YM350-LED MAGNETIC LOCK</h5>
+                    <p class="card-text">Heavy-duty LED magnetic lock system</p>
+                    <div class="stock-status">
+                        <i class="fas fa-check-circle in-stock"></i> In Stock
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 13. EL-DC8002 DOOR CLOSER -->
+        <div class="col-md-4 col-lg-3 product-item" data-category="access">
+            <div class="card">
+                <span class="badge bg-primary category-badge">ACCESS</span>
+                <img src="assets/ACCES PRODUCTS/Acces Products/13.jpg" class="card-img-top" alt="EL-DC8002">
+                <div class="card-body">
+                    <h5 class="card-title">EL-DC8002 DOOR CLOSER (82-2)</h5>
+                    <p class="card-text">Professional automatic door closing mechanism</p>
+                    <div class="stock-status">
+                        <i class="fas fa-check-circle in-stock"></i> In Stock
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 14. EL-DOOR CLOSER 100-120KG -->
+        <div class="col-md-4 col-lg-3 product-item" data-category="access">
+            <div class="card">
+                <span class="badge bg-primary category-badge">ACCESS</span>
+                <img src="assets/ACCES PRODUCTS/EL 0 DOOR CLOSER 100 - 120 KG .jpg" class="card-img-top" alt="EL-DOOR CLOSER">
+                <div class="card-body">
+                    <h5 class="card-title">EL-DOOR CLOSER 100-120KG (83-2)</h5>
+                    <p class="card-text">Heavy-duty door closer for large doors</p>
+                    <div class="stock-status">
+                        <i class="fas fa-check-circle in-stock"></i> In Stock
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 15. 3 AMP POWER SUPPLY BENEFIT -->
+        <div class="col-md-4 col-lg-3 product-item" data-category="access">
+            <div class="card">
+                <span class="badge bg-primary category-badge">ACCESS</span>
+                <img src="assets/ACCES PRODUCTS/3 AMP POWER SUPPLY BE...jpg" class="card-img-top" alt="3 AMP POWER SUPPLY">
+                <div class="card-body">
+                    <h5 class="card-title">3 AMP POWER SUPPLY BENEFIT</h5>
+                    <p class="card-text">Reliable power supply for access control systems</p>
+                    <div class="stock-status">
+                        <i class="fas fa-check-circle in-stock"></i> In Stock
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 16. 5 AMP POWER SUPPLY BENEFIT -->
+        <div class="col-md-4 col-lg-3 product-item" data-category="access">
+            <div class="card">
+                <span class="badge bg-primary category-badge">ACCESS</span>
+                <img src="assets/ACCES PRODUCTS/5 AMP POWER SUPPLY BENEFIT .jpg" class="card-img-top" alt="5 AMP POWER SUPPLY">
+                <div class="card-body">
+                    <h5 class="card-title">5 AMP POWER SUPPLY BENEFIT</h5>
+                    <p class="card-text">High-capacity power supply for larger systems</p>
+                    <div class="stock-status">
+                        <i class="fas fa-check-circle in-stock"></i> In Stock
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 17. ABK 280 ZL BRACKET -->
+        <div class="col-md-4 col-lg-3 product-item" data-category="access">
+            <div class="card">
+                <span class="badge bg-primary category-badge">ACCESS</span>
+                <img src="assets/ACCES PRODUCTS/ABK-280-ZL-BRACKET-FOR-280-MAGLOCK-500x500.jpg" class="card-img-top" alt="ABK 280 ZL BRACKET">
+                <div class="card-body">
+                    <h5 class="card-title">ABK 280 ZL BRACKET FOR 280 MAGLOCK</h5>
+                    <p class="card-text">Compatible mounting bracket for 280 magnetic locks</p>
+                    <div class="stock-status">
+                        <i class="fas fa-check-circle in-stock"></i> In Stock
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 18. ABK 350 ZL BRACKET -->
+        <div class="col-md-4 col-lg-3 product-item" data-category="access">
+            <div class="card">
+                <span class="badge bg-primary category-badge">ACCESS</span>
+                <img src="assets/ACCES PRODUCTS/Acces Products/18.jpg" class="card-img-top" alt="ABK 350 ZL BRACKET">
+                <div class="card-body">
+                    <h5 class="card-title">ABK 350 ZL BRACKET FOR 350 MAGLOCK</h5>
+                    <p class="card-text">Heavy-duty mounting bracket for 350 magnetic locks</p>
+                    <div class="stock-status">
+                        <i class="fas fa-check-circle in-stock"></i> In Stock
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 19. DS-KAS261 ACCESS CONTROL TERMINAL KIT -->
+        <div class="col-md-4 col-lg-3 product-item" data-category="access">
+            <div class="card">
+                <span class="badge bg-primary category-badge">ACCESS</span>
+                <img src="assets/ACCES PRODUCTS/Acces Products/19.jpg" class="card-img-top" alt="DS-KAS261">
+                <div class="card-body">
+                    <h5 class="card-title">DS-KAS261 ACCESS CONTROL TERMINAL KIT</h5>
+                    <p class="card-text">Complete access control terminal solution</p>
+                    <div class="stock-status">
+                        <i class="fas fa-check-circle in-stock"></i> In Stock
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 20. DSK1A340X ATTENDANCE MACHINE -->
+        <div class="col-md-4 col-lg-3 product-item" data-category="access">
+            <div class="card">
+                <span class="badge bg-primary category-badge">ACCESS</span>
+                <img src="assets/ACCES PRODUCTS/DSK1A340X ATTENDANCE .webp" class="card-img-top" alt="DSK1A340X">
+                <div class="card-body">
+                    <h5 class="card-title">DSK1A340X ATTENDANCE MACHINE</h5>
+                    <p class="card-text">Professional time and attendance tracking system</p>
+                    <div class="stock-status">
+                        <i class="fas fa-check-circle in-stock"></i> In Stock
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- F19 Fingerprint Terminal -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="access">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS</span>
+            <img src="assets/ACCES PRODUCTS/Acces Products/20.jpg" class="card-img-top" alt="F19 FINGERPRINT">
+            <div class="card-body">
+                <h5 class="card-title">F19 FINGERPRINT TERMINAL</h5>
+                <p class="card-text">Advanced fingerprint terminal for access control</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Continue with all Access Control products -->
+    <!-- ... Add all 46 access control products following the same pattern ... -->
+
+    <!-- Access Automation Products -->
+<div class="row" id="accessControlProducts">
+    <!-- ...existing products... -->
+
+    <!-- 21. Access Automation Product 1 -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="accessControlProducts">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS AUTOMATION</span>
+            <img src="assets/Products/sliding gates.jpg" class="card-img-top" alt="Access Automation Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Automatic Sliding Gates</h5>
+                <p class="card-text">Motorized gates that slide horizontally to allow entry and exit. Suitable for residential, commercial, and industrial spaces.</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 22. Access Automation Product 2 -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="accessControlProducts">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS AUTOMATION</span>
+            <img src="assets/Products/RFID_Door_Access_Control_System_Kit_2_1024x1024.webp" class="card-img-top" alt="Access Automation Product 2">
+            <div class="card-body">
+                <h5 class="card-title">RFID Access control Systems</h5>
+                <p class="card-text">Uses Radio Frequency Identification (RFID) cards or tags for access. Ideal for offices, parking lots, and gated communities.</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 23. Access Automation Product 3 -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="accessControlProducts">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS AUTOMATION</span>
+            <img src="assets/Products/Biometric Acces Control.webp" class="card-img-top" alt="Access Automation Product 3">
+            <div class="card-body">
+                <h5 class="card-title">Biometric Acces Control</h5>
+                <p class="card-text">Relies on fingerprint, facial recognition, or iris scanning for entry. Common in high-security environments like labs and data centers.</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 24. Access Automation Product 4 -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="accessControlProducts">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS AUTOMATION</span>
+            <img src="assets/Products/Gate-Barrier.webp" class="card-img-top" alt="Access Automation Product 4">
+            <div class="card-body">
+                <h5 class="card-title">Barrier Gate Systems</h5>
+                <p class="card-text">Motorized barriers or boom gates used in parking lots, toll booths, and restricted areas to control vehicle access.</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 25. Access Automation Product 5 -->
+    <div class="col-md-4 col-lg-3 product-item" data-category="accessControlProducts">
+        <div class="card">
+            <span class="badge bg-primary category-badge">ACCESS AUTOMATION</span>
+            <img src="assets/Products/smart doorlocks.jpeg" class="card-img-top" alt="Access Automation Product 4">
+            <div class="card-body">
+                <h5 class="card-title">Smart Door Locks </h5>
+                <p class="card-text">Electronic locks that can be operated using codes, smartphone apps, or biometric verification. Perfect for homes, hotels, and offices.</p>
+                <div class="stock-status">
+                    <i class="fas fa-check-circle in-stock"></i> In Stock
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Cable Products -->
+    <!-- Cable Products Section -->
+<!-- 1. 4 CORE ALARM CABLE -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/4 CORE ALARM.jpg" class="card-img-top" alt="4 CORE ALARM CABLE">
+        <div class="card-body">
+            <h5 class="card-title">4 CORE ALARM CABLE</h5>
+            <p class="card-text">High-quality alarm cable for security systems</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. 6 CORE ALARM CABLE -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/6 CORE ALAR CABLE.jpg" class="card-img-top" alt="6 CORE ALARM CABLE">
+        <div class="card-body">
+            <h5 class="card-title">6 CORE ALARM CABLE</h5>
+            <p class="card-text">Professional-grade 6-core security cable</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. 8 CORE ALARM CABLE -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/8-CORE- ALARM- CABLE.jpg" class="card-img-top" alt="8 CORE ALARM CABLE">
+        <div class="card-body">
+            <h5 class="card-title">8 CORE ALARM CABLE</h5>
+            <p class="card-text">Multi-core alarm cable for complex security systems</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4. RG 59 COAXIAL CABLE 100 MTRS -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/100m-RG59 COAXIAL CABLE .jpg" class="card-img-top" alt="RG 59 COAXIAL CABLE">
+        <div class="card-body">
+            <h5 class="card-title">RG 59 COAXIAL CABLE 100 MTRS</h5>
+            <p class="card-text">High-quality coaxial cable for video transmission</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5. CAT 6 NETWORK CABLE (White) -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/CAT 6 NETWORK CABLE WHITE.jpeg" class="card-img-top" alt="CAT 6 WHITE">
+        <div class="card-body">
+            <h5 class="card-title">CAT 6 NETWORK CABLE (White)</h5>
+            <p class="card-text">High-speed network cable for data transmission</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 6. CAT 6 NETWORK CABLE (Grey) -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/CAT 6 NETWORK CABLE GREY .webp" class="card-img-top" alt="CAT 6 GREY">
+        <div class="card-body">
+            <h5 class="card-title">CAT 6 NETWORK CABLE (Grey)</h5>
+            <p class="card-text">Professional-grade network cable for data networks</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 7. RG 59 COAXIAL CABLE W/POWER300MTRS -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/Coaxial-RG59-with-power-305M-cable.webp" class="card-img-top" alt="RG 59 WITH POWER">
+        <div class="card-body">
+            <h5 class="card-title">RG 59 COAXIAL CABLE W/POWER300MTRS</h5>
+            <p class="card-text">Coaxial cable with integrated power line</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 8. FIRE RESISTANT ALARM CABLE 1.5MM 100 -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/fire-alarm-cableb.jpg" class="card-img-top" alt="FIRE RESISTANT CABLE 1.5MM">
+        <div class="card-body">
+            <h5 class="card-title">FIRE RESISTANT ALARM CABLE 1.5MM 100</h5>
+            <p class="card-text">Fire-rated cable for critical safety systems</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 9. FIRE RESISTANT ALARM CABLE 0.8MM 500 -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/Fire-cable-0.8mm-seetec-store-100M (1).jpeg" class="card-img-top" alt="FIRE RESISTANT CABLE 0.8MM 500">
+        <div class="card-body">
+            <h5 class="card-title">FIRE RESISTANT ALARM CABLE 0.8MM 500</h5>
+            <p class="card-text">500-meter fire-resistant cable for extensive installations</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 10. FIRE RESISTANT ALARM CABLE 0.8MM 100M -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/Fire-cable-0.8mm-seetec-store-100M.jpeg" class="card-img-top" alt="FIRE RESISTANT CABLE 0.8MM 100M">
+        <div class="card-body">
+            <h5 class="card-title">FIRE RESISTANT ALARM CABLE 0.8MM 100M</h5>
+            <p class="card-text">100-meter fire-resistant cable for smaller installations</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 11. SECURISTIC GLUE -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/SECURISTIC GLUE.jpg" class="card-img-top" alt="SECURISTIC GLUE">
+        <div class="card-body">
+            <h5 class="card-title">SECURISTIC GLUE</h5>
+            <p class="card-text">Professional adhesive for cable installation</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 12. INSULATING TAPE -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/INSULATING TAPES .jpg" class="card-img-top" alt="INSULATING TAPE">
+        <div class="card-body">
+            <h5 class="card-title">INSULATING TAPE</h5>
+            <p class="card-text">High-quality electrical insulation tape</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 13. L&S-PVC BENDS 20MM -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/L&S- PVC BENDS 20MM.webp" class="card-img-top" alt="PVC BENDS">
+        <div class="card-body">
+            <h5 class="card-title">L&S-PVC BENDS 20MM</h5>
+            <p class="card-text">20mm PVC bends for cable management</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 14. L&S-PVC COUPLERS 20MM -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/Conduit_PVC_20MM_Coupling_9060_580x.webp" class="card-img-top" alt="PVC COUPLERS">
+        <div class="card-body">
+            <h5 class="card-title">L&S-PVC COUPLERS 20MM</h5>
+            <p class="card-text">20mm PVC couplers for conduit connections</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 15. L&S-PVC MINI TRUNKINGS -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/pvc-trunking.jpeg" class="card-img-top" alt="PVC MINI TRUNKINGS">
+        <div class="card-body">
+            <h5 class="card-title">L&S-PVC MINI TRUNKINGS</h5>
+            <p class="card-text">Compact PVC trunking for neat cable management</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 16. L & S PVC CONDUITS -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/white-pvc-conduit-pipe-500x500-1.jpg" class="card-img-top" alt="PVC CONDUITS">
+        <div class="card-body">
+            <h5 class="card-title">L & S PVC CONDUITS</h5>
+            <p class="card-text">Standard PVC conduits for cable protection</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 17. L & S PVC SADDLES 20 MM -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/saddles 20MM.webp" class="card-img-top" alt="PVC SADDLES">
+        <div class="card-body">
+            <h5 class="card-title">L & S PVC SADDLES 20 MM</h5>
+            <p class="card-text">20mm PVC saddles for secure conduit mounting</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 18. RG45 -->
+<div class="col-md-4 col-lg-3 product-item" data-category="cable">
+    <div class="card">
+        <span class="badge bg-info category-badge">CABLE</span>
+        <img src="assets/CABLES/RG45.jpg" class="card-img-top" alt="RG45">
+        <div class="card-body">
+            <h5 class="card-title">RG45</h5>
+            <p class="card-text">Standard RG45 connector for network cables</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Continue with remaining cable products... -->
+
+   <!-- Camera Products Section -->
+
+<!-- 1. BNC CONNECTORS -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/CAMERA/BNC CONNECTORS.jpeg" class="card-img-top" alt="BNC CONNECTORS">
+        <div class="card-body">
+            <h5 class="card-title">BNC CONNECTORS</h5>
+            <p class="card-text">Professional BNC connectors for CCTV systems</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. DS-2CE56C0T-IR(6MM) -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/CAMERA/DS-2CE56C0T-IR.png" class="card-img-top" alt="DS-2CE56C0T-IR">
+        <div class="card-body">
+            <h5 class="card-title">DS-2CE56C0T-IR(6MM)</h5>
+            <p class="card-text">High-resolution surveillance camera with IR capability</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. DS-2CE17D0T-IT3F(6MM) -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/CAMERA/hikvision-ds-2ce17d0t-it3f-outdoor-security-camera-2mp-3-6mm-kimo-store-2_1024x.webp" class="card-img-top" alt="DS-2CE17D0T-IT3F">
+        <div class="card-body">
+            <h5 class="card-title">DS-2CE17D0T-IT3F(6MM)</h5>
+            <p class="card-text">HD CCTV camera with advanced IR technology</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4. DS-2CE16C0T-IR3.6MM -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/CAMERA/DS-2CE56C0T-IR.png" class="card-img-top" alt="DS-2CE16C0T-IR">
+        <div class="card-body">
+            <h5 class="card-title">DS-2CE16C0T-IR3.6MM</h5>
+            <p class="card-text">Compact IR bullet camera with 3.6mm lens</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5. DS-2CE56D0T-IR 2.8MM -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/CAMERA/Hikvision-DS-2CE56D0T-IRMM-ceiling-1080p-2.8MM-C.webp" class="card-img-top" alt="DS-2CE56D0T-IR">
+        <div class="card-body">
+            <h5 class="card-title">DS-2CE56D0T-IR 2.8MM</h5>
+            <p class="card-text">Wide-angle dome camera with IR functionality</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 6. DS-2CD1043G0-I 4MM -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/CAMERA/Hikvision-Value-DS-2CE16C0T-IR-3.6mm-B-1.webp" class="card-img-top" alt="DS-2CD1043G0-I">
+        <div class="card-body">
+            <h5 class="card-title">DS-2CD1043G0-I 4MM</h5>
+            <p class="card-text">4MP IP camera with 4mm fixed lens</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 7. DS-2CD1143GO-I 2.8MM -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/images/camera/ds-2cd1143go.jpg" class="card-img-top" alt="DS-2CD1143GO-I">
+        <div class="card-body">
+            <h5 class="card-title">DS-2CD1143GO-I 2.8MM</h5>
+            <p class="card-text">4MP Network Dome Camera with 2.8mm lens</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 8. DS-2CD1023GOE-I4MMC -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/images/camera/ds-2cd1023goe.jpg" class="card-img-top" alt="DS-2CD1023GOE-I4MMC">
+        <div class="card-body">
+            <h5 class="card-title">DS-2CD1023GOE-I4MMC</h5>
+            <p class="card-text">2MP IP Bullet Camera with 4mm fixed lens</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 9. DS-2CD1123GOE-I 2.8 MMC -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/images/camera/ds-2cd1123goe.jpg" class="card-img-top" alt="DS-2CD1123GOE-I">
+        <div class="card-body">
+            <h5 class="card-title">DS-2CD1123GOE-I 2.8 MMC</h5>
+            <p class="card-text">2MP Network Dome Camera with 2.8mm lens</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 10. DC-JACK-PINS FEMALE -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/images/camera/dc-jack-female.jpg" class="card-img-top" alt="DC-JACK-PINS FEMALE">
+        <div class="card-body">
+            <h5 class="card-title">DC-JACK-PINS FEMALE</h5>
+            <p class="card-text">Female DC power connector for CCTV cameras</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 11. DC-JACK-PINS MALE -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/images/camera/dc-jack-male.jpg" class="card-img-top" alt="DC-JACK-PINS MALE">
+        <div class="card-body">
+            <h5 class="card-title">DC-JACK-PINS MALE</h5>
+            <p class="card-text">Male DC power connector for CCTV cameras</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 12. DS-7204HGHI-M1 DVR -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/images/camera/ds-7204hghi.jpg" class="card-img-top" alt="DS-7204HGHI-M1">
+        <div class="card-body">
+            <h5 class="card-title">DS-7204HGHI-M1</h5>
+            <p class="card-text">4-Channel Turbo HD DVR</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 13. DS-7208HGHI-M1 DVR -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/images/camera/ds-7208hghi.jpg" class="card-img-top" alt="DS-7208HGHI-M1">
+        <div class="card-body">
+            <h5 class="card-title">DS-7208HGHI-M1</h5>
+            <p class="card-text">8-Channel Turbo HD DVR</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hard Disk Drives Section -->
+<!-- 14. 1TB Hard Disk Drive -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/images/camera/hdd-1tb.jpg" class="card-img-top" alt="1TB HDD">
+        <div class="card-body">
+            <h5 class="card-title">1TB Hard Disk Drive</h5>
+            <p class="card-text">Surveillance-grade 1TB storage solution</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add more HDD capacities (2TB to 10TB) following the same pattern -->
+
+<!-- Network Video Recorders -->
+<!-- 15. DS-7608NI-K1/8P -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/images/camera/ds-7608ni.jpg" class="card-img-top" alt="DS-7608NI-K1/8P">
+        <div class="card-body">
+            <h5 class="card-title">DS-7608NI-K1/8P</h5>
+            <p class="card-text">8-Channel Network Video Recorder with PoE</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- POE Switches -->
+<!-- 16. DS-3E0510P-E/M SWITCH -->
+<div class="col-md-4 col-lg-3 product-item" data-category="camera">
+    <div class="card">
+        <span class="badge bg-danger category-badge">CAMERA</span>
+        <img src="assets/images/camera/ds-3e0510p.jpg" class="card-img-top" alt="DS-3E0510P-E/M">
+        <div class="card-body">
+            <h5 class="card-title">DS-3E0510P-E/M SWITCH</h5>
+            <p class="card-text">10-Port PoE Network Switch</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- ... Add all camera products following the same pattern ... -->
+
+     <!-- Fire Detection Products Section -->
+
+<!-- 1. CFP 2ZONE MOTHERBOARD EN54 -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire detection">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE DETECTION</span>
+        <img src="assets/FIRE/3 ZONE EP EXTINGUISHER.jpg" class="card-img-top" alt="CFP 2ZONE">
+        <div class="card-body">
+            <h5 class="card-title">CFP 2ZONE MOTHERBOARD EN54</h5>
+            <p class="card-text">Professional fire detection and control system</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Fire Fighting Products Products Section -->
+
+<!-- 1. CFP 2ZONE MOTHERBOARD EN54 -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire fighting">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE FIGHTING</span>
+        <img src="assets/FIRE/3 ZONE EP EXTINGUISHER.jpg" class="card-img-top" alt="CFP 2ZONE">
+        <div class="card-body">
+            <h5 class="card-title">CFP 2ZONE MOTHERBOARD EN54</h5>
+            <p class="card-text">Professional fire detection and control system</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Fire Suppresion Products Section -->
+
+<!-- 1. CFP 2ZONE MOTHERBOARD EN54 -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Suppresion">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE SUPPRESION</span>
+        <img src="assets/FIRE/3 ZONE EP EXTINGUISHER.jpg" class="card-img-top" alt="CFP 2ZONE">
+        <div class="card-body">
+            <h5 class="card-title">CFP 2ZONE MOTHERBOARD EN54</h5>
+            <p class="card-text">Professional fire detection and control system</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. XFP NETWORKABLE SINGLE LOOP 16 ZONE PANEL -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE</span>
+        <img src="assets/FIRE/p_5_6_7_567-XFP-2-Loop-32-Zone-Addressable-Fire-Panel.webp" class="card-img-top" alt="XFP 16 ZONE">
+        <div class="card-body">
+            <h5 class="card-title">XFP NETWORKABLE SINGLE LOOP 16 ZONE PANEL</h5>
+            <p class="card-text">Advanced networkable fire alarm control panel</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. XFP NETWORKABLE SINGLE LOOP 32 ZONE PANEL -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE</span>
+        <img src="assets/FIRE/XFP 32 ZONE.png" class="card-img-top" alt="XFP 32 ZONE">
+        <div class="card-body">
+            <h5 class="card-title">XFP NETWORKABLE SINGLE LOOP 32 ZONE PANEL</h5>
+            <p class="card-text">High-capacity single loop fire alarm panel</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4. XFP NETWORKABLE 2 LOOP 32 ZONE FIRE PANEL -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE</span>
+        <img src="assets/FIRE/p_5_6_7_567-XFP-2-Loop-32-Zone-Addressable-Fire-Panel.webp" class="card-img-top" alt="XFP 2 LOOP">
+        <div class="card-body">
+            <h5 class="card-title">XFP NETWORKABLE 2 LOOP 32 ZONE FIRE PANEL</h5>
+            <p class="card-text">Dual loop fire alarm control panel with networking capability</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5. 3 ZONE EP EXITENGUISHER CONTROL PANEL -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE</span>
+        <img src="assets/FIRE/3 ZONE EP EXTINGUISHER.jpg" class="card-img-top" alt="3 ZONE EP">
+        <div class="card-body">
+            <h5 class="card-title">3 ZONE EP EXITENGUISHER CONTROL PANEL</h5>
+            <p class="card-text">Specialized extinguisher control system</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 6. 2 ZONE FIRE CONTROL PANEL NON EXPANDABLE -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE</span>
+        <img src="assets/images/fire/2zone-panel.jpg" class="card-img-top" alt="2 ZONE PANEL">
+        <div class="card-body">
+            <h5 class="card-title">2 ZONE FIRE CONTROL PANEL NON EXPANDABLE</h5>
+            <p class="card-text">Compact 2-zone fire alarm control panel</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 7. 4 ZONE CONTROL FIRE PANEL NON EXPANDABLE -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE</span>
+        <img src="assets/Products/1.png" class="card-img-top" alt="4 ZONE PANEL">
+        <div class="card-body">
+            <h5 class="card-title">Fire supression</h5>
+            <p class="card-text">Fire Extinguishers</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 8. 8 ZONE CONTROL FIRE PANEL NON EXPANDABLE -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE</span>
+        <img src="assets/Products/Fire alarmsystem.png" class="card-img-top" alt="8 ZONE PANEL">
+        <div class="card-body">
+            <h5 class="card-title">Fire Suprresion</h5>
+            <p class="card-text">Fire extingisher</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- IT Networking Products Section -->
+<!-- 1. Network Switch -->
+<div class="col-md-4 col-lg-3 product-item" data-category="IT Networking">
+    <div class="card">
+        <span class="badge bg-success category-badge">IT NETWORKING</span>
+        <img src="assets/Products/Network Switch.webp" class="card-img-top" alt="Network Switch">
+        <div class="card-body">
+            <h5 class="card-title">Network Switch</h5>
+            <p class="card-text">High-performance network switch for seamless connectivity</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Wireless Router -->
+<div class="col-md-4 col-lg-3 product-item" data-category="IT Networking">
+    <div class="card">
+        <span class="badge bg-success category-badge">IT NETWORKING</span>
+        <img src="assets/Products/network router.jpg" class="card-img-top" alt="Wireless Router">
+        <div class="card-body">
+            <h5 class="card-title">Wireless Router</h5>
+            <p class="card-text">Reliable wireless router for home and office use</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. Network Cable -->
+<div class="col-md-4 col-lg-3 product-item" data-category="IT Networking">
+    <div class="card">
+        <span class="badge bg-success category-badge">IT NETWORKING</span>
+        <img src="assets/Products/Network Cable .jpg" class="card-img-top" alt="Network Cable">
+        <div class="card-body">
+            <h5 class="card-title">Network Cable</h5>
+            <p class="card-text">High-speed network cable for data transmission</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4. Network Adapter -->
+<div class="col-md-4 col-lg-3 product-item" data-category="IT Networking">
+    <div class="card">
+        <span class="badge bg-success category-badge">IT NETWORKING</span>
+        <img src="assets/Products/Network Adapter.webp" class="card-img-top" alt="Network Adapter">
+        <div class="card-body">
+            <h5 class="card-title">Network Adapter</h5>
+            <p class="card-text">Reliable network adapter for enhanced connectivity</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5. Network Storage Device -->
+<div class="col-md-4 col-lg-3 product-item" data-category="IT Networking">
+    <div class="card">
+        <span class="badge bg-success category-badge">IT NETWORKING</span>
+        <img src="assets/Products/Network Storage Device.webp" class="card-img-top" alt="Network Storage Device">
+        <div class="card-body">
+            <h5 class="card-title">Network Storage Device</h5>
+            <p class="card-text">Secure network storage for data backup and sharing</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Air Conditioning Products Section -->
+<!-- 1. Split Air Conditioner -->
+<div class="col-md-4 col-lg-3 product-item" data-category="Air conditioning">
+    <div class="card">
+        <span class="badge bg-info category-badge">AIR CONDITIONING</span>
+        <img src="assets/Products/Split Air Conditioner.png" class="card-img-top" alt="Split Air Conditioner">
+        <div class="card-body">
+            <h5 class="card-title">Split Air Conditioner</h5>
+            <p class="card-text">Efficient split air conditioner for home and office</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Window Air Conditioner -->
+<div class="col-md-4 col-lg-3 product-item" data-category="Air conditioning">
+    <div class="card">
+        <span class="badge bg-info category-badge">AIR CONDITIONING</span>
+        <img src="assets/Products/Window Air Conditioner.jpg" class="card-img-top" alt="Window Air Conditioner">
+        <div class="card-body">
+            <h5 class="card-title">Window Air Conditioner</h5>
+            <p class="card-text">Compact window air conditioner for small spaces</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. Portable Air Conditioner -->
+<div class="col-md-4 col-lg-3 product-item" data-category="Air conditioning">
+    <div class="card">
+        <span class="badge bg-info category-badge">AIR CONDITIONING</span>
+        <img src="assets/Products/Portable Air Conditioner.webp" class="card-img-top" alt="Portable Air Conditioner">
+        <div class="card-body">
+            <h5 class="card-title">Portable Air Conditioner</h5>
+            <p class="card-text">Versatile portable air conditioner for flexible cooling</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4. Central Air Conditioning System -->
+<div class="col-md-4 col-lg-3 product-item" data-category="Air conditioning">
+    <div class="card">
+        <span class="badge bg-info category-badge">AIR CONDITIONING</span>
+        <img src="assets/Products/Central Air Conditioning System.jpg" class="card-img-top" alt="Central Air Conditioning System">
+        <div class="card-body">
+            <h5 class="card-title">Central Air Conditioning System</h5>
+            <p class="card-text">Comprehensive central air conditioning for large buildings</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5. Ductless Mini-Split System -->
+<div class="col-md-4 col-lg-3 product-item" data-category="Air conditioning">
+    <div class="card">
+        <span class="badge bg-info category-badge">AIR CONDITIONING</span>
+        <img src="assets/Products/Ductless Mini-Split System.webp" class="card-img-top" alt="Ductless Mini-Split System">
+        <div class="card-body">
+            <h5 class="card-title">Ductless Mini-Split System</h5>
+            <p class="card-text">Energy-efficient ductless mini-split system for targeted cooling</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fire Detection Products Section -->
+<!-- 1. Smoke Detector -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire detection">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE DETECTION</span>
+        <img src="assets/Products/Smoke Detector.jpeg" class="card-img-top" alt="Smoke Detector">
+        <div class="card-body">
+            <h5 class="card-title">Smoke Detector</h5>
+            <p class="card-text">Reliable smoke detector for early fire detection</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Heat Detector -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire detection">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE DETECTION</span>
+        <img src="assets/Products/Heat Detector.png" class="card-img-top" alt="Heat Detector">
+        <div class="card-body">
+            <h5 class="card-title">Heat Detector</h5>
+            <p class="card-text">Advanced heat detector for fire safety</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. Fire Alarm Control Panel -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire detection">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE DETECTION</span>
+        <img src="assets/Products/Fire Alarm Control Panel.webp" class="card-img-top" alt="Fire Alarm Control Panel">
+        <div class="card-body">
+            <h5 class="card-title">Fire Alarm Control Panel</h5>
+            <p class="card-text">Centralized fire alarm control panel for comprehensive monitoring</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4. Fire Alarm Bell -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire detection">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE DETECTION</span>
+        <img src="assets/Products/Fire Alarm Bell.jpeg" class="card-img-top" alt="Fire Alarm Bell">
+        <div class="card-body">
+            <h5 class="card-title">Fire Alarm Bell</h5>
+            <p class="card-text">Loud fire alarm bell for effective alerting</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5. Fire Alarm Strobe Light -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire detection">
+    <div class="card">
+        <span class="badge bg-warning category-badge">FIRE DETECTION</span>
+        <img src="assets/Products/Fire Alarm Strobe Light .jpeg" class="card-img-top" alt="Fire Alarm Strobe Light">
+        <div class="card-body">
+            <h5 class="card-title">Fire Alarm Strobe Light</h5>
+            <p class="card-text">Bright strobe light for visual fire alerts</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fire Suppression Products Section -->
+<!-- 1. Fire Extinguisher -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Suppression">
+    <div class="card">
+        <span class="badge bg-danger category-badge">FIRE SUPPRESSION</span>
+        <img src="assets/Products/Fire Extinguisher.jpeg" class="card-img-top" alt="Fire Extinguisher">
+        <div class="card-body">
+            <h5 class="card-title">Fire Extinguisher</h5>
+            <p class="card-text">Portable fire extinguisher for emergency use</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Fire Suppression System -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Suppression">
+    <div class="card">
+        <span class="badge bg-danger category-badge">FIRE SUPPRESSION</span>
+        <img src="assets/Products/Fire Suppression System.jpg" class="card-img-top" alt="Fire Suppression System">
+        <div class="card-body">
+            <h5 class="card-title">Fire Suppression System</h5>
+            <p class="card-text">Comprehensive fire suppression system for large facilities</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. Fire Suppression Agent -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Suppression">
+    <div class="card">
+        <span class="badge bg-danger category-badge">FIRE SUPPRESSION</span>
+        <img src="assets/Products/Fire Suppression Agent.webp" class="card-img-top" alt="Fire Suppression Agent">
+        <div class="card-body">
+            <h5 class="card-title">Fire Suppression Agent</h5>
+            <p class="card-text">Effective fire suppression agent for rapid response</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4. Fire Suppression Control Panel -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Suppression">
+    <div class="card">
+        <span class="badge bg-danger category-badge">FIRE SUPPRESSION</span>
+        <img src="assets/Products/Fire Suppression Control Panel.jpg" class="card-img-top" alt="Fire Suppression Control Panel">
+        <div class="card-body">
+            <h5 class="card-title">Fire Suppression Control Panel</h5>
+            <p class="card-text">Centralized control panel for fire suppression systems</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5. Fire Suppression Nozzle -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Suppression">
+    <div class="card">
+        <span class="badge bg-danger category-badge">FIRE SUPPRESSION</span>
+        <img src="assets/Products/Fire Suppression Nozzle.jpeg" class="card-img-top" alt="Fire Suppression Nozzle">
+        <div class="card-body">
+            <h5 class="card-title">Fire Suppression Nozzle</h5>
+            <p class="card-text">High-performance nozzle for effective fire suppression</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fire Fighting Products Section -->
+<!-- 1. Fire Hose -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Fighting">
+    <div class="card">
+        <span class="badge bg-danger category-badge">FIRE FIGHTING</span>
+        <img src="assets/Products/Fire Hose.jpg" class="card-img-top" alt="Fire Hose">
+        <div class="card-body">
+            <h5 class="card-title">Fire Hose</h5>
+            <p class="card-text">Durable fire hose for firefighting operations</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Fire Hydrant -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Fighting">
+    <div class="card">
+        <span class="badge bg-danger category-badge">FIRE FIGHTING</span>
+        <img src="assets/Products/Fire Hydrant.webp" class="card-img-top" alt="Fire Hydrant">
+        <div class="card-body">
+            <h5 class="card-title">Fire Hydrant</h5>
+            <p class="card-text">Reliable fire hydrant for water supply during firefighting</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. Firefighter Helmet -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Fighting">
+    <div class="card">
+        <span class="badge bg-danger category-badge">FIRE FIGHTING</span>
+        <img src="assets/Products/Firefighter Helmet .jpg" class="card-img-top" alt="Firefighter Helmet">
+        <div class="card-body">
+            <h5 class="card-title">Firefighter Helmet</h5>
+            <p class="card-text">Protective helmet for firefighters</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4. Firefighter Boots -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Fighting">
+    <div class="card">
+        <span class="badge bg-danger category-badge">FIRE FIGHTING</span>
+        <img src="assets/Products/Firefighter Boots.jpg" class="card-img-top" alt="Firefighter Boots">
+        <div class="card-body">
+            <h5 class="card-title">Firefighter Boots</h5>
+            <p class="card-text">Durable boots for firefighting professionals</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5. Firefighter Gloves -->
+<div class="col-md-4 col-lg-3 product-item" data-category="fire Fighting">
+    <div class="card">
+        <span class="badge bg-danger category-badge">FIRE FIGHTING</span>
+        <img src="assets/Products/firefightergloves.jpg" class="card-img-top" alt="Firefighter Gloves">
+        <div class="card-body">
+            <h5 class="card-title">Firefighter Gloves</h5>
+            <p class="card-text">Protective gloves for firefighting operations</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Baggage/Luggage Scanners Products Section -->
+<!-- 1. X-Ray Baggage Scanner -->
+<div class="col-md-4 col-lg-3 product-item" data-category="baggage/ laugage scanners">
+    <div class="card">
+        <span class="badge bg-secondary category-badge">BAGGAGE SCANNER</span>
+        <img src="assets/Products/X-Ray Baggage Scanner.jpg" class="card-img-top" alt="X-Ray Baggage Scanner">
+        <div class="card-body">
+            <h5 class="card-title">X-Ray Baggage Scanner</h5>
+            <p class="card-text">High-resolution x-ray scanner for baggage inspection</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Dual-View Baggage Scanner -->
+<div class="col-md-4 col-lg-3 product-item" data-category="baggage/ laugage scanners">
+    <div class="card">
+        <span class="badge bg-secondary category-badge">BAGGAGE SCANNER</span>
+        <img src="assets/Products/Dual-View Baggage Scanner.jpg" class="card-img-top" alt="Dual-View Baggage Scanner">
+        <div class="card-body">
+            <h5 class="card-title">Dual-View Baggage Scanner</h5>
+            <p class="card-text">Advanced dual-view scanner for enhanced security</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. Portable Baggage Scanner -->
+<div class="col-md-4 col-lg-3 product-item" data-category="baggage/ laugage scanners">
+    <div class="card">
+        <span class="badge bg-secondary category-badge">BAGGAGE SCANNER</span>
+        <img src="assets/Products/Portable Baggage Scanner.jpg" class="card-img-top" alt="Portable Baggage Scanner">
+        <div class="card-body">
+            <h5 class="card-title">Portable Baggage Scanner</h5>
+            <p class="card-text">Compact and portable scanner for on-the-go security</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4. High-Speed Baggage Scanner -->
+<div class="col-md-4 col-lg-3 product-item" data-category="baggage/ laugage scanners">
+    <div class="card">
+        <span class="badge bg-secondary category-badge">BAGGAGE SCANNER</span>
+        <img src="assets/Products/High-Speed Baggage Scanner.jpg" class="card-img-top" alt="High-Speed Baggage Scanner">
+        <div class="card-body">
+            <h5 class="card-title">High-Speed Baggage Scanner</h5>
+            <p class="card-text">Fast and efficient scanner for high-traffic areas</p>
+            <div class="stock-status">
+                <i class="fas fa-check-circle in-stock"></i> In Stock
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+
+            <!-- Pagination -->
+            <nav aria-label="Product navigation" class="mt-4">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-primary text-light py-4" style="background-color: #0021c1 !important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>COMPANY</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light">About Us</a></li>
+                    <li><a href="/about.html" class="text-light">Leadership</a></li>
+                    <li><a href="/blog.html" class="text-light">Community and Social Responsibility</a></li>
+                    <li><a href="/blog.html" class="text-light">Company Stracture</a></li>
+                </ul>
+            </div>   
+            <div class="col-md-3">
+                <h5>NEWS</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/blog.html" class="text-light">News</a></li>
+                    <li><a href="/blog.html" class="text-light">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>CAREERS</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/blog.html" class="text-light">Careers</a></li>
+                    <li><a href="/blog.html" class="text-light">Job Search</a></li>
+                </ul>
+                <h6 class="mt-4">CONTACT US</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/about.html" class="text-light">Support</a></li>
+                    <li><a href="/products.html" class="text-light">Business Inquiries</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-3">
+                <h5>FOLLOW US</h5>
+                <div class="social-icons">
+                    <a href="#" class="text-light me-2"><i class="fab fa-linkedin"></i>Linkedin</a>
+                    <a href="https://www.facebook.com/share/p/15TAmaEdQy/?mibextid=wwXIfr" class="text-light me-2"><i class="fab fa-facebook"></i>Facebook</a>
+                    <a href="https://x.com/OrbitSolsLtd" class="text-light me-2"><i class="fab fa-twitter"></i>Twitter</a>
+                    <a href="https://www.youtube.com/@OrbitSolutions-ltd?sttick=0" class="text-light me-2"><i class="fab fa-youtube"></i>Youtube</a>
+                    <a href="https://www.instagram.com/orbitsolutionlimited?igsh=MW9zeGc5azN5ancxbw%3D%3D&utm_source=qr" class="text-light"><i class="fab fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+        </div>
+        <h3>Find Us Here</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7975.04058549848!2d30.111537999999996!3d-1.9447310000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca71e39fff2ef%3A0xd8feba0bb61d4711!2sKG%2016%20Ave%2C%20Kigali%2C%20Rwanda!5e0!3m2!1sen!2ske!4v1734590838379!5m2!1sen!2ske" width="1100" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="mb-0">&copy; 2025 Orbit Solutions Ltd | All Rights Reserved</p>
+                <ul class="list-inline mt-2">
+                    <li class="list-inline-item"><a href="#" class="text-light">Terms & Conditions</a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light">Privacy Statement</a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light">Your Privacy Choices</a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light">Cookie Notice</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const productItems = document.querySelectorAll('.product-item');
+            const searchInput = document.getElementById('productSearch');
+
+            // Filter products by category
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const category = btn.getAttribute('data-category');
+                    
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Filter products
+                    productItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Search functionality
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                
+                productItems.forEach(item => {
+                    const title = item.querySelector('.card-title').textContent.toLowerCase();
+                    const description = item.querySelector('.card-text').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
