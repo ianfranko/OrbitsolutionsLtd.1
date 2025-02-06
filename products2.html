@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit Solutions Ltd | Products</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .hero-section {
+            background:  url('assets/Products page background .jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            margin-bottom: 40px;
+        }
+        
+
+        .hero-content {
+            color: white;
+            text-align: center;
+        }
+
+        .search-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin: -50px auto 30px;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .filter-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .category-btn {
+            border-radius: 20px;
+            margin: 5px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .category-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .product-card {
+            background: white;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .stock-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .brands-section {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+
+    .brand-card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border: 1px solid #eee;
+    }
+
+    .brand-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .brand-logo {
+        max-width: 100px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    .category-brands {
+        display: none;
+    }
+
+    .category-brands.active {
+        display: block;
+    }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .action-buttons {
+            margin-top: auto;
+        }
+    
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-bottom: 20px; 
+            background-color: #fff;
+            box-shadow: var(--shadow);
+        }
+
+        th, td { 
+            border: 1px solid var(--border-color); 
+            padding: 12px; 
+            text-align: left; 
+        }
+
+        th { 
+            background-color: #f2f2f2; 
+            color: var(--primary-color);
+        }
+
+        a { 
+            text-decoration: none; 
+            color: var(--secondary-color); 
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav a {
+                float: none;
+                width: 100%;
+            }
+            
+            table, thead, tbody, th, td, tr { 
+                display: block; 
+            }
+            
+            th { 
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            
+            td { 
+                border: none;
+                position: relative;
+                padding-left: 50%;
+                border-bottom: 1px solid var(--border-color);
+            }
+            
+            td:before { 
+                position: absolute;
+                left: 6px;
+                width: 45%; 
+                padding-right: 10px;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Orbit solutions Logo (1).png" alt="Orbit Solutions Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products2.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="display-4 fw-bold mb-4">Our Products</h1>
+                <p class="lead mb-0">Discover our comprehensive range of security and safety solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <div class="container">
+        <div class="search-section">
+            <div class="input-group">
+                <input type="text" class="form-control form-control-lg" id="searchInput" 
+                       placeholder="Search products...">
+                <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h5 class="text-center mb-3">Browse by Category</h5>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+            <button class="btn btn-outline-primary category-btn" data-category="Fire Suppression Systems">Fire Suppression Systems</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Fire Fighting Systems( Domestic & Industrial)">Fire Fighting Systems (Domestic & Industrial)</button>
+            <button class="btn btn-outline-primary category-btn" data-category="CCTV Installation and Maintenance">CCTV Installation and Maintenance</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Fire Detection and Alarm Systems (Addressable & Conventional)">Fire Detection and Alarm Systems (Addressable & Conventional)</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Intruder Alarm Systems">Intruder Alarm Systems</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Access Control Systems">Access Control Systems</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Access Automation Systems">Access Automation Systems</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Parking Management Systems">Parking Management Systems</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Metal Detectors">Metal Detectors</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Information Technology Networking">Information Technology Networking</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Air Conditioning Systems">Air Conditioning Systems</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Accessories">Accessories</button>
+            <button class="btn btn-outline-primary category-btn" data-category="Smart Class Rooms & Video Conferencing">Smart Class Rooms & Video Conferencing</button>
+            </div>
+        </div>
+
+        <!-- Brands Section (Initially Hidden) -->
+    <div class="brands-section mt-5 d-none">
+        <h5 class="text-center mb-3">Brands </h5>
+        <div class="d-flex flex-wrap justify-content-center gap-2" id="brandsContainer"></div>
+        <!-- Brands will be dynamically loaded here -->
+        </div>
+    </div>
+
+        <!-- Products Grid -->
+    <div class="row g-4 mb-5 mt-5" id="productsGrid">
+        <!-- Product cards will be dynamically loaded here -->
+        <div class="col-md-4 product-card" data-category="Fire Suppression Systems" data-brand="Brand A">
+        <img src="assets/products2/FK-5-1-12.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">FK-5-1-12</h5>
+            <p class="product-description">Description of FK-5-1-12</p>
+            <div class="action-buttons">
+            <button class="btn btn-primary">Get Quote</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Suppression Systems" data-brand="Brand B">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Inert Gas</h5>
+            <p class="product-description">Description of Inert Gas</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Suppression Systems" data-brand="Brand C">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">HFC - 227ea Gas</h5>
+            <p class="product-description">Description of HFC - 227ea Gas (Server Room - Total Flooding)</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">Get Quote</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Suppression Systems" data-brand="Brand D">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Triple Star Fire Protection System</h5>
+            <p class="product-description">Triple Star Fire Protection System for Commercial & Domestic Kitchen</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Suppression Systems" data-brand="Brand E">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">FireDETEC®</h5>
+            <p class="product-description">FireDETEC® automatic fire suppression systems protect individual electrical cabinets, CNC machines and other critical equipment, helping to prevent serious damage and ensure business continuity.</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Suppression Systems" data-brand="Brand F">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">COMPACT LINE®</h5>
+            <p class="product-description">COMPACT LINE® includes the world's most compact high-pressure watermist automatic fire suppression system for vehicle engines.</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Suppression Systems" data-brand="Brand G">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">CLEANFIRE®</h5>
+            <p class="product-description">CLEANFIRE® complete VdS approved fire suppression system using 3M™Novec™1230 fire protection fluid is ideal for special hazards fire, safe for humans, viable, long-term and environmentally sustainable technology.</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Suppression Systems" data-brand="Brand H">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">INEREX®</h5>
+            <p class="product-description">INEREX® product line providing everything needed for a VdS, UL- and FM-approved total flooding, inert gas fire system for data centers, hospitals, office buildings and other sensitive environments.</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Suppression Systems" data-brand="Brand I">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">RXCO2®</h5>
+            <p class="product-description">RXCO2® line of UL approved CO2 systems protecting engine rooms, generator rooms, power stations, flammable liquid storage rooms, and many more.</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Fighting Systems( Domestic & Industrial)" data-brand="Brand J">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Fire Extinguishers (Powder & Foam)</h5>
+            <p class="product-description">Description of Fire Extinguishers (Powder & Foam)</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Fighting Systems( Domestic & Industrial)" data-brand="Brand K">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Fire Alarms</h5>
+            <p class="product-description">Description of Fire Alarms</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Fighting Systems( Domestic & Industrial)" data-brand="Brand L">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Smoke Detectors</h5>
+            <p class="product-description">Description of Smoke Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Fighting Systems( Domestic & Industrial)" data-brand="Brand M">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Heat Detectors</h5>
+            <p class="product-description">Description of Heat Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Fighting Systems( Domestic & Industrial)" data-brand="Brand N">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Fire Pumps</h5>
+            <p class="product-description">Description of Fire Pumps</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Fighting Systems( Domestic & Industrial)" data-brand="Brand O">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Horse Reel</h5>
+            <p class="product-description">Description of Horse Reel</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Fighting Systems( Domestic & Industrial)" data-brand="Brand P">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Water Hydrants</h5>
+            <p class="product-description">Description of Water Hydrants</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Fighting Systems( Domestic & Industrial)" data-brand="Brand Q">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Fire Extinguishers (Powder & Foam)</h5>
+            <p class="product-description">Description of Fire Extinguishers (Powder & Foam)</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Fighting Systems( Domestic & Industrial)" data-brand="Brand R">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Black Steel Pipes</h5>
+            <p class="product-description">Description of Black Steel Pipes</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="CCTV Installation and Maintenance" data-brand="Brand S">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Cameras</h5>
+            <p class="product-description">Description of Cameras</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="CCTV Installation and Maintenance" data-brand="Brand T">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Number Plate Recognition</h5>
+            <p class="product-description">Description of Number Plate Recognition</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="CCTV Installation and Maintenance" data-brand="Brand U">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">POE Switches</h5>
+            <p class="product-description">Description of POE Switches</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="CCTV Installation and Maintenance" data-brand="Brand V">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Monitor Screens</h5>
+            <p class="product-description">Description of Monitor Screens</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="CCTV Installation and Maintenance" data-brand="Brand W">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Hard Drives</h5>
+            <p class="product-description">Description of Hard Drives</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="CCTV Installation and Maintenance" data-brand="Brand X">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Connectors</h5>
+            <p class="product-description">Description of Connectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Detection and Alarm Systems (Addressable & Conventional)" data-brand="Brand Y">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Smoke Detectors</h5>
+            <p class="product-description">Description of Smoke Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Detection and Alarm Systems (Addressable & Conventional)" data-brand="Brand Z">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Fire Detection Panels</h5>
+            <p class="product-description">Description of Fire Detection Panels</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Detection and Alarm Systems (Addressable & Conventional)" data-brand="Brand AA">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Sounders</h5>
+            <p class="product-description">Description of Sounders</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Detection and Alarm Systems (Addressable & Conventional)" data-brand="Brand AB">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Call Points</h5>
+            <p class="product-description">Description of Call Points</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Detection and Alarm Systems (Addressable & Conventional)" data-brand="Brand AC">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Extinguishant Panels</h5>
+            <p class="product-description">Description of Extinguishant Panels</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Detection and Alarm Systems (Addressable & Conventional)" data-brand="Brand AD">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Remote Status Unit</h5>
+            <p class="product-description">Description of Remote Status Unit</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Detection and Alarm Systems (Addressable & Conventional)" data-brand="Brand AE">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Abort Station</h5>
+            <p class="product-description">Description of Abort Station</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Fire Detection and Alarm Systems (Addressable & Conventional)" data-brand="Brand AF">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Fire Beam Detectors</h5>
+            <p class="product-description">Description of Fire Beam Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AG">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Motion Sensors</h5>
+            <p class="product-description">Description of Motion Sensors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AH">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Intruder Alarm System Panels</h5>
+            <p class="product-description">Description of Intruder Alarm System Panels</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AI">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">GSM Communicator</h5>
+            <p class="product-description">Description of GSM Communicator</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AJ">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Panic Button</h5>
+            <p class="product-description">Description of Panic Button</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AK">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Siren Box</h5>
+            <p class="product-description">Description of Siren Box</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AL">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Strobe Light</h5>
+            <p class="product-description">Description of Strobe Light</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AM">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Foot Switches</h5>
+            <p class="product-description">Description of Foot Switches</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AN">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Beam Detectors</h5>
+            <p class="product-description">Description of Beam Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AO">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Wireless Detectors</h5>
+            <p class="product-description">Description of Wireless Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AP">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Watch out Detectors</h5>
+            <p class="product-description">Description of Watch out Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AQ">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Zone Expanders</h5>
+            <p class="product-description">Description of Zone Expanders</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Intruder Alarm Systems" data-brand="Brand AR">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Key Pads</h5>
+            <p class="product-description">Description of Key Pads</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Access Control Systems" data-brand="Brand AS">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Face Recognition Terminals</h5>
+            <p class="product-description">Description of Face Recognition Terminals</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Access Control Systems" data-brand="Brand AT">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Controllers</h5>
+            <p class="product-description">Description of Controllers</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Access Control Systems" data-brand="Brand AU">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Time & Attendance System</h5>
+            <p class="product-description">Description of Time & Attendance System</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Access Control Systems" data-brand="Brand AV">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Biometric Finger Print Reader</h5>
+            <p class="product-description">Description of Biometric Finger Print Reader</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Access Control Systems" data-brand="Brand AW">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Slave Reader</h5>
+            <p class="product-description">Description of Slave Reader</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Access Automation Systems" data-brand="Brand AX">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Boom Gate Barriers</h5>
+            <p class="product-description">Description of Boom Gate Barriers</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Access Automation Systems" data-brand="Brand AY">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Automatic Swing Gate / Sliding Gates</h5>
+            <p class="product-description">Description of Automatic Swing Gate / Sliding Gates</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Access Automation Systems" data-brand="Brand AZ">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Bollards</h5>
+            <p class="product-description">Description of Bollards</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Access Automation Systems" data-brand="Brand BA">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Road Spikes</h5>
+            <p class="product-description">Description of Road Spikes</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Access Automation Systems" data-brand="Brand BB">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Turnstile</h5>
+            <p class="product-description">Description of Turnstile</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Parking Management Systems" data-brand="Brand BC">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Number Plate Recognition Cameras</h5>
+            <p class="product-description">Description of Number Plate Recognition Cameras</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Parking Management Systems" data-brand="Brand BD">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Magnetic Cards</h5>
+            <p class="product-description">Description of Magnetic Cards</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Parking Management Systems" data-brand="Brand BE">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Monitor Screen</h5>
+            <p class="product-description">Description of Monitor Screen</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Parking Management Systems" data-brand="Brand BF">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Control Panels</h5>
+            <p class="product-description">Description of Control Panels</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Parking Management Systems" data-brand="Brand BG">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Ticket Dispensers</h5>
+            <p class="product-description">Description of Ticket Dispensers</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Metal Detectors" data-brand="Brand BH">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Luggage Scanners</h5>
+            <p class="product-description">Description of Luggage Scanners</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Metal Detectors" data-brand="Brand BI">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Walk Through Metal Detectors</h5>
+            <p class="product-description">Description of Walk Through Metal Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Metal Detectors" data-brand="Brand BJ">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Hand Held Metal Detectors</h5>
+            <p class="product-description">Description of Hand Held Metal Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Metal Detectors" data-brand="Brand BK">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Bomb Detectors</h5>
+            <p class="product-description">Description of Bomb Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Metal Detectors" data-brand="Brand BL">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Tactical Detectors</h5>
+            <p class="product-description">Description of Tactical Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Metal Detectors" data-brand="Brand BM">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Under Vehicle Detectors</h5>
+            <p class="product-description">Description of Under Vehicle Detectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BN">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Wireless Access Points</h5>
+            <p class="product-description">Description of Wireless Access Points</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BO">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Switches</h5>
+            <p class="product-description">Description of Switches</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BP">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Cables</h5>
+            <p class="product-description">Description of Cables</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BQ">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Connectors</h5>
+            <p class="product-description">Description of Connectors</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BR">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Trunking / Conduits</h5>
+            <p class="product-description">Description of Trunking / Conduits</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BS">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">PDU / DBs</h5>
+            <p class="product-description">Description of PDU / DBs</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BT">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Polycom Video Conferencing</h5>
+            <p class="product-description">Description of Polycom Video Conferencing</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BU">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Video Conferencing Systems</h5>
+            <p class="product-description">Description of Video Conferencing Systems</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BV">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Smart Phones</h5>
+            <p class="product-description">Description of Smart Phones</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BW">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">PABX</h5>
+            <p class="product-description">Description of PABX</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Information Technology Networking" data-brand="Brand BX">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Office Telephone System</h5>
+            <p class="product-description">Description of Office Telephone System</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Air Conditioning Systems" data-brand="Brand BY">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Air Conditioners & Accessories</h5>
+            <p class="product-description">Description of Air Conditioners & Accessories</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Accessories" data-brand="Brand BY">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Power Cables</h5>
+            <p class="product-description">Description of Power Cables</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Accessories" data-brand="Brand BZ">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Network Cables</h5>
+            <p class="product-description">Description of Network Cables</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Accessories" data-brand="Brand CA">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Trunking / Conduits</h5>
+            <p class="product-description">Description of Trunking / Conduits</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Accessories" data-brand="Brand CB">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Batteries</h5>
+            <p class="product-description">Description of Batteries</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Accessories" data-brand="Brand CC">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Maglocks</h5>
+            <p class="product-description">Description of Maglocks</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Accessories" data-brand="Brand CD">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Door Closures</h5>
+            <p class="product-description">Description of Door Closures</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Accessories" data-brand="Brand CE">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Emergency Exit Buttons</h5>
+            <p class="product-description">Description of Emergency Exit Buttons</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Accessories" data-brand="Brand CF">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Emergency Exit Signs</h5>
+            <p class="product-description">Description of Emergency Exit Signs</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Accessories" data-brand="Brand CG">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Receivers</h5>
+            <p class="product-description">Description of Receivers</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Accessories" data-brand="Brand CH">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Transmitters</h5>
+            <p class="product-description">Description of Transmitters</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Smart Class Rooms & Video Conferencing " data-brand="Brand CI">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Cameras</h5>
+            <p class="product-description">Description of Cameras</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Smart Class Rooms & Video Conferencing " data-brand="Brand CJ">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Microphones</h5>
+            <p class="product-description">Description of Microphones</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Smart Class Rooms & Video Conferencing " data-brand="Brand CK">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Speakers</h5>
+            <p class="product-description">Description of Speakers</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-card" data-category="Smart Class Rooms & Video Conferencing " data-brand="Brand CL">
+        <img src="path/to/image.jpg" class="product-image" alt="Product Image">
+        <div class="p-3">
+            <h5 class="product-title">Podiums</h5>
+            <p class="product-description">Description of Podiums</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light py-4" style="background-color: #0021c1 !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>COMPANY</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">About Us</a></li>
+                        <li><a href="/about.html" class="text-light">Leadership</a></li>
+                        <li><a href="/blog.html" class="text-light">Community and Social Responsibility</a></li>
+                        <li><a href="/blog.html" class="text-light">Company Stracture</a></li>
+                    </ul>
+                </div>   
+                <div class="col-md-3">
+                    <h5>NEWS</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/blog.html" class="text-light">News</a></li>
+                        <li><a href="/blog.html" class="text-light">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>CAREERS</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/blog.html" class="text-light">Careers</a></li>
+                        <li><a href="/blog.html" class="text-light">Job Search</a></li>
+                    </ul>
+                    <h6 class="mt-4">CONTACT US</h6>
+                    <ul class="list-unstyled">
+                        <li><p>Cell Phone: +250 788 386 500 /  +250 788 305 775, Email: ingabirej@yahoo.com, orbit_solutions@outlook.com</p></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>FOLLOW US</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-light me-2"><i class="fab fa-linkedin"></i>Linkedin</a>
+                        <a href="https://www.facebook.com/share/p/15TAmaEdQy/?mibextid=wwXIfr" class="text-light me-2"><i class="fab fa-facebook"></i>Facebook</a>
+                        <a href="https://x.com/OrbitSolsLtd" class="text-light me-2"><i class="fab fa-twitter"></i>X</a>
+                        <a href="https://www.youtube.com/@orbitsolutionlimited" class="text-light me-2"><i class="fab fa-youtube"></i>Youtube</a>
+                        <a href="https://www.instagram.com/orbitsolutionlimited?igsh=MW9zeGc5azN5ancxbw%3D%3D&utm_source=qr" class="text-light"><i class="fab fa-instagram"></i>Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <h3>Find Us Here</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5155283840827!2d30.109907074349554!3d-1.946746098035607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca74f5e2d11db%3A0x904d6638e42372dd!2sORBIT%20SOLUTIONS%20LTD!5e0!3m2!1sen!2ske!4v1738763824874!5m2!1sen!2ske" width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Orbit Solutions Ltd | All Rights Reserved</p>
+                    <ul class="list-inline mt-2">
+                        <li class="list-inline-item"><a href="#" class="text-light">Terms & Conditions</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-light">Privacy Statement</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-light">Your Privacy Choices</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-light">Cookie Notice</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" async></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const productsGrid = document.getElementById('productsGrid');
+            const categoryBrands = document.querySelectorAll('.category-brands');
+
+            // Filter products by category
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    const category = button.dataset.category;
+                    filterProducts(category);
+                    showBrands(category);
+                });
+            });
+
+            // Search functionality
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                filterProducts(getCurrentCategory(), searchTerm);
+            });
+
+            function getCurrentCategory() {
+                const activeButton = document.querySelector('.category-btn.active');
+                return activeButton ? activeButton.dataset.category : 'all';
+            }
+
+            function filterProducts(category, searchTerm = '') {
+                const products = document.querySelectorAll('.product-card');
+                products.forEach(product => {
+                    const productCategory = product.dataset.category;
+                    const productName = product.querySelector('.product-title').textContent.toLowerCase();
+                    const productDesc = product.querySelector('.product-description').textContent.toLowerCase();
+
+                    const matchesCategory = category === 'all' || productCategory === category;
+                    const matchesSearch = !searchTerm || 
+                                       productName.includes(searchTerm) || 
+                                       productDesc.includes(searchTerm);
+
+                    product.style.display = matchesCategory && matchesSearch ? 'block' : 'none';
+                });
+            }
+
+            function showBrands(category) {
+                categoryBrands.forEach(brand => {
+                    if (brand.dataset.category === category) {
+                        brand.style.display = 'block';
+                    } else {
+                        brand.style.display = 'none';
+                    }
+                });
+            }
+
+            // Initialize by showing all brands
+            showBrands('all');
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const categoryButtons = document.querySelectorAll(".category-btn");
+    const brandsSection = document.querySelector(".brands-section");
+    const brandsContainer = document.getElementById("brandsContainer");
+
+    // Define brands for each category
+    const categoryBrands = {
+        "Fire Suppression Systems": ["Rotarex", "Arsenware", "SRI", "NAFFCO"],
+        "Fire Fighting Systems( Domestic & Industrial)": ["NAFFCO", "SRI", "Safety Plus"],
+        "CCTV Installation and Maintenance": ["Hikvision", "PELCO", "ZK", "Motorola", "Samsung"],
+        "Fire Detection and Alarm Systems (Addressable & Conventional)": ["Context Plus", "C-TEC", "FIREX", "Arsenware"],
+        "Intruder Alarm Systems": [ "Risco", "IDS", "HIK"],
+        "Access Control Systems": ["ZK", "Hikvision", "Assa Abloy", "Bosch", "Paxton"],
+        "Access Automation Systems": ["Centurion", "ZK Teco", "Hikvision"],
+        "Parking Management Systems": ["Hikvision", "Samsung", "ZK", "Centurion"],
+        "Metal Detectors": ["Garrett", "Hikvivson", "Astrophycs", "RAPI Scan", "Eastimage", "Smith Detection"],
+        "Information Technology Networking": ["Cisco", "Hikvision", "APC", "IBM", "L&T(Larsen & Tourbro)", "Wipro", "verizon COmmunications", "AT&T (American Telephon & Telegraph)", "Bharti Airtel", "HCL Technologies"],
+        "Air Conditioning Systems": ["Daikin", "General", "Goodman", "Lennox", "Carrier Global", "LG", "Samsung", "Mitsubishi Electronics",],
+        "Accessories": ["East Africa Cables", "Chloride Exide", "HOP Cables", "YLI", "Sherlotronics", "IDS", ],
+        "Smart Class Rooms & Video Conferencing": ["Hikvivsion", "People link",]
+    };
+
+    categoryButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const selectedCategory = this.getAttribute("data-category");
+
+            // Fetch brands for the selected category
+            const brands = categoryBrands[selectedCategory] || [];
+
+            // Update brands container
+            brandsContainer.innerHTML = "";
+            if (brands.length > 0) {
+                brands.forEach(brand => {
+                    const brandBtn = document.createElement("button");
+                    brandBtn.classList.add("btn", "btn-outline-secondary");
+                    brandBtn.textContent = brand;
+                    brandsContainer.appendChild(brandBtn);
+                });
+                brandsSection.classList.remove("d-none");
+            } else {
+                brandsSection.classList.add("d-none");
+            }
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
